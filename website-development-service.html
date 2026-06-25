@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Website Development Services | Anvesh Digital Marketing Agency – Hyderabad</title>
+<meta name="description" content="Professional Website Development Services in Hyderabad — Custom websites, E-commerce, Landing Pages, WordPress & more. SEO-ready, fast, mobile-first. Anvesh Digital." />
+<meta name="keywords" content="website development hyderabad, web design hyderabad, custom website, ecommerce website, landing page, wordpress development, anvesh digital" />
+<meta name="author" content="Anvesh Akula" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://anveshakula.in/website-development" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://anveshakula.in/website-development" />
+<meta property="og:title" content="Website Development Services | Anvesh Digital – Hyderabad" />
+<meta property="og:description" content="Professional website development in Hyderabad. Custom, E-commerce, Landing pages & more. Mobile-first, SEO-ready." />
+<meta property="og:image" content="https://anveshakula.in/og-image.jpg" />
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+/* ══════════════════════════════════
+   CSS VARIABLES – exact match to main site
+══════════════════════════════════ */
+:root {
+  --red:       #E8001D;
+  --red-dark:  #B30016;
+  --red-soft:  rgba(232,0,29,0.10);
+  --blue:      #E8F4FD;
+  --blue-mid:  #B3D9F7;
+  --blue-deep: #2196F3;
+  --white:     #FFFFFF;
+  --text:      #1A1A2E;
+  --text2:     #4A5568;
+  --muted:     #718096;
+  --card:      #F0F8FF;
+  --card2:     #FAFCFF;
+  --border:    rgba(33,150,243,0.15);
+  --border2:   rgba(232,0,29,0.12);
+  --shadow:    0 4px 24px rgba(33,150,243,0.12);
+  --shadow-r:  0 4px 24px rgba(232,0,29,0.18);
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Inter',sans-serif; background:var(--white); color:var(--text); overflow-x:hidden; }
+
+/* ══════════════════════════════════
+   STICKY NAVBAR
+══════════════════════════════════ */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:1000;
+  background:var(--white);
+  border-bottom:2px solid var(--red);
+  box-shadow:0 2px 20px rgba(232,0,29,0.1);
+  padding:0 4%; height:68px;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.logo {
+  font-family:'Montserrat',sans-serif; font-weight:900; font-size:1.3rem;
+  color:var(--text); text-decoration:none; line-height:1.1; flex-shrink:0;
+}
+.logo span { color:var(--red); }
+.logo small {
+  display:block; font-size:0.5rem; font-weight:600; letter-spacing:2.5px;
+  text-transform:uppercase; color:var(--muted);
+}
+.nav-links { display:flex; align-items:center; gap:4px; list-style:none; }
+.nav-links > li > a {
+  display:flex; align-items:center; gap:4px; padding:8px 13px;
+  font-size:0.84rem; font-weight:600; color:var(--text);
+  text-decoration:none; border-radius:8px;
+  transition:color 0.2s, background 0.2s; white-space:nowrap;
+}
+.nav-links > li > a:hover { color:var(--red); background:var(--red-soft); }
+.nav-cta {
+  background:var(--red); color:#fff; padding:9px 20px; border-radius:50px;
+  font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.8rem;
+  text-decoration:none; white-space:nowrap;
+  transition:background 0.2s, transform 0.2s;
+  box-shadow:0 4px 14px rgba(232,0,29,0.3); flex-shrink:0;
+}
+.nav-cta:hover { background:var(--red-dark); transform:scale(1.04); }
+.hamburger {
+  display:none; flex-direction:column; gap:5px; cursor:pointer;
+  padding:6px; border:none; background:none;
+}
+.hamburger span {
+  display:block; width:24px; height:2.5px;
+  background:var(--text); border-radius:2px; transition:all 0.3s;
+}
+.hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); }
+.hamburger.open span:nth-child(2) { opacity:0; }
+.hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
+.mobile-menu {
+  display:none; position:fixed; top:68px; left:0; right:0; bottom:0;
+  background:var(--white); z-index:998; overflow-y:auto;
+  padding:20px 5% 40px; flex-direction:column; gap:4px;
+  border-top:1px solid var(--border);
+}
+.mobile-menu.open { display:flex; }
+.mobile-menu a {
+  padding:13px 16px; font-weight:600; font-size:0.95rem; color:var(--text);
+  text-decoration:none; border-radius:10px; transition:background 0.18s, color 0.18s;
+}
+.mobile-menu a:hover { background:var(--red-soft); color:var(--red); }
+
+/* ══════════════════════════════════
+   BREADCRUMB
+══════════════════════════════════ */
+.breadcrumb {
+  margin-top:68px; padding:14px 5%;
+  background:var(--blue);
+  border-bottom:1px solid var(--border);
+  font-size:0.8rem; color:var(--muted);
+  display:flex; align-items:center; gap:6px; flex-wrap:wrap;
+}
+.breadcrumb a { color:var(--red); text-decoration:none; font-weight:600; }
+.breadcrumb a:hover { text-decoration:underline; }
+.breadcrumb .sep { color:var(--muted); }
+
+/* ══════════════════════════════════
+   HERO
+══════════════════════════════════ */
+.hero {
+  min-height:88vh;
+  background:linear-gradient(135deg, #fff 0%, #E8F4FD 55%, #fff 100%);
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  text-align:center;
+  padding:60px 5% 70px;
+  position:relative; overflow:hidden;
+}
+.hero-circle-1 {
+  position:absolute; top:-100px; right:-100px;
+  width:500px; height:500px; border-radius:50%;
+  background:radial-gradient(circle,rgba(232,0,29,0.06) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-circle-2 {
+  position:absolute; bottom:-80px; left:-80px;
+  width:400px; height:400px; border-radius:50%;
+  background:radial-gradient(circle,rgba(33,150,243,0.08) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-badge {
+  display:inline-flex; align-items:center; gap:8px;
+  background:rgba(33,150,243,0.1); border:1.5px solid rgba(33,150,243,0.3);
+  color:var(--blue-deep); padding:6px 18px; border-radius:50px;
+  font-size:0.73rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;
+  margin-bottom:26px; position:relative; z-index:1;
+  animation:fadeDown 0.7s ease both;
+}
+.badge-dot {
+  width:7px; height:7px; border-radius:50%; background:var(--red);
+  animation:blink 1.4s infinite;
+}
+@keyframes blink { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.3;transform:scale(1.7)} }
+.hero h1 {
+  font-family:'Montserrat',sans-serif; font-weight:900;
+  font-size:clamp(2rem,5.5vw,4.2rem); line-height:1.08; letter-spacing:-1.5px;
+  max-width:860px; color:var(--text); position:relative; z-index:1;
+  animation:fadeUp 0.7s 0.15s ease both;
+}
+.hero h1 .red { color:var(--red); }
+.hero h1 .blue { color:var(--blue-deep); }
+.hero-sub {
+  margin-top:20px; max-width:580px; color:var(--text2);
+  font-size:clamp(0.92rem,2vw,1.08rem); line-height:1.75;
+  position:relative; z-index:1;
+  animation:fadeUp 0.7s 0.28s ease both;
+}
+.hero-sub strong { color:var(--red); font-weight:700; }
+.hero-btns {
+  display:flex; flex-wrap:wrap; gap:14px; justify-content:center;
+  margin-top:34px; position:relative; z-index:1;
+  animation:fadeUp 0.7s 0.4s ease both;
+}
+.btn-primary {
+  display:inline-flex; align-items:center; gap:9px;
+  background:var(--red); color:#fff;
+  padding:14px 30px; border-radius:50px;
+  font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.9rem;
+  text-decoration:none; box-shadow:0 6px 24px rgba(232,0,29,0.4);
+  transition:background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.btn-primary:hover { background:var(--red-dark); transform:translateY(-3px); box-shadow:0 10px 32px rgba(232,0,29,0.5); }
+.btn-secondary {
+  display:inline-flex; align-items:center; gap:9px;
+  background:var(--white); color:var(--text);
+  padding:14px 30px; border-radius:50px;
+  border:2px solid var(--blue-mid);
+  font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.9rem;
+  text-decoration:none; transition:border-color 0.2s, background 0.2s, color 0.2s;
+}
+.btn-secondary:hover { border-color:var(--blue-deep); color:var(--blue-deep); background:var(--blue); }
+
+/* hero stats */
+.stats {
+  display:flex; flex-wrap:wrap; justify-content:center; gap:40px;
+  margin-top:56px; padding-top:40px;
+  border-top:1.5px solid var(--border);
+  position:relative; z-index:1;
+  animation:fadeUp 0.7s 0.55s ease both;
+}
+.stat { text-align:center; }
+.stat-num { font-family:'Montserrat',sans-serif; font-weight:900; font-size:2rem; color:var(--red); line-height:1; }
+.stat-label { font-size:0.78rem; color:var(--muted); margin-top:5px; }
+
+/* ══════════════════════════════════
+   SECTION BASE
+══════════════════════════════════ */
+.section { padding:88px 5%; }
+.section-alt { background:var(--blue); padding:88px 5%; }
+.sec-label {
+  text-align:center; font-size:0.72rem; font-weight:700;
+  letter-spacing:3px; text-transform:uppercase; color:var(--red); margin-bottom:12px;
+}
+.sec-title {
+  text-align:center; font-family:'Montserrat',sans-serif; font-weight:900;
+  font-size:clamp(1.7rem,3.5vw,2.7rem); letter-spacing:-0.5px; color:var(--text); margin-bottom:14px;
+}
+.sec-desc {
+  text-align:center; color:var(--text2); max-width:540px;
+  margin:0 auto 52px; line-height:1.75; font-size:0.96rem;
+}
+
+/* ══════════════════════════════════
+   OVERVIEW SECTION
+══════════════════════════════════ */
+.overview-wrap {
+  max-width:1000px; margin:0 auto;
+  display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;
+}
+.overview-visual {
+  background:linear-gradient(135deg, var(--red-soft), var(--blue));
+  border-radius:24px; height:360px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:6rem; position:relative; overflow:hidden;
+}
+.overview-visual::before {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(circle at 30% 40%, rgba(232,0,29,0.08), transparent 60%);
+}
+.overview-text .sec-title { text-align:left; }
+.overview-text .sec-label { text-align:left; }
+.overview-text p { color:var(--text2); font-size:0.92rem; line-height:1.8; margin-bottom:14px; }
+.overview-text p strong { color:var(--red); }
+.industries-tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }
+.ind-tag {
+  display:inline-flex; align-items:center; gap:5px;
+  background:var(--white); border:1.5px solid var(--border);
+  color:var(--text2); font-size:0.77rem; font-weight:600;
+  padding:5px 12px; border-radius:50px;
+  transition:border-color 0.2s, color 0.2s;
+}
+.ind-tag:hover { border-color:var(--red); color:var(--red); }
+
+/* ══════════════════════════════════
+   SERVICES WE OFFER (clickable cards)
+══════════════════════════════════ */
+.services-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+  gap:22px; max-width:1100px; margin:0 auto;
+}
+.service-card {
+  background:var(--white); border:1.5px solid var(--border);
+  border-radius:18px; padding:30px 24px;
+  cursor:pointer; transition:transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  position:relative; overflow:hidden;
+}
+.service-card::after {
+  content:''; position:absolute; top:0; left:0; right:0; height:4px;
+  background:linear-gradient(90deg,var(--red),var(--blue-deep));
+  transform:scaleX(0); transform-origin:left; transition:transform 0.3s;
+}
+.service-card:hover::after { transform:scaleX(1); }
+.service-card:hover {
+  transform:translateY(-7px);
+  box-shadow:0 18px 50px rgba(232,0,29,0.1), 0 4px 16px rgba(33,150,243,0.08);
+  border-color:rgba(232,0,29,0.2);
+}
+.service-icon { font-size:2.2rem; margin-bottom:14px; display:block; }
+.service-name { font-family:'Montserrat',sans-serif; font-weight:800; font-size:1rem; color:var(--text); margin-bottom:8px; }
+.service-desc { color:var(--text2); font-size:0.86rem; line-height:1.65; }
+.service-tag {
+  display:inline-block; margin-top:14px;
+  background:var(--red-soft); color:var(--red);
+  font-size:0.68rem; font-weight:700; letter-spacing:1px; text-transform:uppercase;
+  padding:4px 12px; border-radius:50px;
+}
+
+/* ══════════════════════════════════
+   FEATURES INCLUDED
+══════════════════════════════════ */
+.features-grid {
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+  gap:18px; max-width:1100px; margin:0 auto;
+}
+.feature-item {
+  display:flex; align-items:flex-start; gap:14px;
+  background:var(--white); border:1.5px solid var(--border);
+  border-radius:14px; padding:20px 18px;
+  transition:transform 0.2s, box-shadow 0.2s;
+}
+.feature-item:hover { transform:translateY(-4px); box-shadow:var(--shadow); }
+.feature-check {
+  width:30px; height:30px; border-radius:50%; flex-shrink:0;
+  background:var(--red-soft);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--red); font-weight:900; font-size:0.85rem;
+}
+.feature-text strong { display:block; font-size:0.88rem; font-weight:700; color:var(--text); margin-bottom:3px; }
+.feature-text span { font-size:0.8rem; color:var(--muted); line-height:1.5; }
+
+/* ══════════════════════════════════
+   TECH STACK
+══════════════════════════════════ */
+.tech-grid {
+  display:flex; flex-wrap:wrap; gap:16px;
+  justify-content:center; max-width:860px; margin:0 auto;
+}
+.tech-pill {
+  display:inline-flex; align-items:center; gap:10px;
+  background:var(--white); border:1.5px solid var(--border);
+  border-radius:50px; padding:12px 22px;
+  font-weight:700; font-size:0.88rem; color:var(--text);
+  transition:border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.tech-pill:hover { border-color:var(--red); transform:translateY(-3px); box-shadow:var(--shadow-r); }
+.tech-pill .t-icon { font-size:1.3rem; }
+
+/* ══════════════════════════════════
+   DEVELOPMENT PROCESS
+══════════════════════════════════ */
+.process-wrap { max-width:900px; margin:0 auto; position:relative; }
+.process-line {
+  position:absolute; left:28px; top:0; bottom:0; width:2px;
+  background:linear-gradient(to bottom, var(--red), var(--blue-deep));
+  border-radius:2px;
+}
+.process-step {
+  display:flex; align-items:flex-start; gap:24px;
+  margin-bottom:32px; padding-left:72px; position:relative;
+}
+.step-num {
+  position:absolute; left:0; top:0;
+  width:56px; height:56px; border-radius:50%;
+  background:var(--white); border:2.5px solid var(--red);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Montserrat',sans-serif; font-weight:900; font-size:1rem;
+  color:var(--red); flex-shrink:0; z-index:1;
+  transition:background 0.2s, color 0.2s;
+}
+.process-step:hover .step-num { background:var(--red); color:#fff; }
+.step-body {
+  background:var(--white); border:1.5px solid var(--border);
+  border-radius:16px; padding:22px 24px; flex:1;
+  transition:border-color 0.2s, box-shadow 0.2s;
+}
+.process-step:hover .step-body { border-color:rgba(232,0,29,0.25); box-shadow:var(--shadow-r); }
+.step-title { font-family:'Montserrat',sans-serif; font-weight:800; font-size:1rem; color:var(--text); margin-bottom:6px; }
+.step-desc { color:var(--text2); font-size:0.86rem; line-height:1.65; }
+
+/* ══════════════════════════════════
+   WHY CHOOSE US
+══════════════════════════════════ */
+.why-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:22px; max-width:1000px; margin:0 auto;
+}
+.why-card {
+  background:var(--white); border:1.5px solid var(--border);
+  border-radius:16px; padding:30px 20px; text-align:center;
+  transition:transform 0.2s, box-shadow 0.2s;
+}
+.why-card:hover { transform:translateY(-5px); box-shadow:var(--shadow); }
+.why-icon { font-size:2rem; margin-bottom:12px; }
+.why-title { font-family:'Montserrat',sans-serif; font-weight:800; font-size:0.98rem; color:var(--text); margin-bottom:8px; }
+.why-desc { color:var(--muted); font-size:0.84rem; line-height:1.6; }
+
+/* ══════════════════════════════════
+   WEBSITE TYPES
+══════════════════════════════════ */
+.types-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+  gap:16px; max-width:1000px; margin:0 auto;
+}
+.type-card {
+  background:var(--white); border:1.5px solid var(--border);
+  border-radius:14px; padding:22px 16px; text-align:center;
+  transition:transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.type-card:hover { transform:translateY(-5px); border-color:rgba(232,0,29,0.3); box-shadow:var(--shadow-r); }
+.type-icon { font-size:2rem; margin-bottom:10px; display:block; }
+.type-name { font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.88rem; color:var(--text); }
+
+/* ══════════════════════════════════
+   PRICING
+══════════════════════════════════ */
+.pricing-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  gap:24px; max-width:900px; margin:0 auto;
+}
+.price-card {
+  background:var(--white); border:1.5px solid var(--border);
+  border-radius:22px; padding:36px 28px;
+  text-align:center; position:relative;
+  transition:transform 0.25s, box-shadow 0.25s;
+}
+.price-card:hover { transform:translateY(-8px); box-shadow:0 24px 60px rgba(232,0,29,0.12); }
+.price-card.popular {
+  border:2.5px solid var(--red);
+  box-shadow:0 8px 32px rgba(232,0,29,0.15);
+}
+.popular-badge {
+  position:absolute; top:-14px; left:50%; transform:translateX(-50%);
+  background:var(--red); color:#fff;
+  font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.72rem;
+  letter-spacing:1.5px; text-transform:uppercase;
+  padding:5px 18px; border-radius:50px;
+  box-shadow:0 4px 12px rgba(232,0,29,0.4);
+}
+.price-name { font-family:'Montserrat',sans-serif; font-weight:900; font-size:1.15rem; color:var(--text); margin-bottom:6px; }
+.price-val { font-family:'Montserrat',sans-serif; font-weight:900; font-size:2.4rem; color:var(--red); line-height:1; margin:14px 0 4px; }
+.price-val small { font-size:1rem; font-weight:600; color:var(--muted); }
+.price-note { font-size:0.78rem; color:var(--muted); margin-bottom:22px; }
+.price-features { list-style:none; text-align:left; margin-bottom:28px; }
+.price-features li {
+  display:flex; align-items:center; gap:10px;
+  padding:7px 0; border-bottom:1px solid var(--border);
+  font-size:0.86rem; color:var(--text2);
+}
+.price-features li::before { content:'✓'; color:var(--red); font-weight:900; font-size:0.85rem; }
+.price-features li.cross { color:var(--muted); }
+.price-features li.cross::before { content:'✗'; color:var(--blue-mid); }
+.price-btn {
+  display:block; width:100%; padding:13px;
+  background:var(--red); color:#fff; border:none; border-radius:50px;
+  font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.9rem;
+  text-decoration:none; text-align:center; cursor:pointer;
+  transition:background 0.2s, transform 0.2s;
+}
+.price-btn:hover { background:var(--red-dark); transform:translateY(-2px); }
+.price-btn.outline {
+  background:transparent; color:var(--red); border:2px solid var(--red);
+}
+.price-btn.outline:hover { background:var(--red-soft); }
+
+/* ══════════════════════════════════
+   PORTFOLIO
+══════════════════════════════════ */
+.works-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:22px; max-width:1000px; margin:0 auto;
+}
+.work-card {
+  background:var(--white); border:1.5px solid var(--border);
+  border-radius:16px; overflow:hidden;
+  transition:transform 0.25s, box-shadow 0.25s;
+}
+.work-card:hover { transform:translateY(-6px); box-shadow:0 14px 40px rgba(33,150,243,0.14); }
+.work-thumb {
+  height:160px; display:flex; align-items:center; justify-content:center;
+  font-size:3.5rem;
+  background:linear-gradient(135deg,var(--blue) 0%,#D6EAF8 100%);
+  position:relative;
+}
+.work-result {
+  position:absolute; top:12px; right:12px;
+  background:var(--red); color:#fff;
+  font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.68rem;
+  padding:4px 10px; border-radius:50px;
+}
+.work-body { padding:20px; }
+.work-title { font-family:'Montserrat',sans-serif; font-weight:800; font-size:1rem; color:var(--text); margin-bottom:6px; }
+.work-desc { color:var(--text2); font-size:0.84rem; line-height:1.6; }
+.work-tag {
+  display:inline-block; margin-top:12px;
+  background:rgba(33,150,243,0.1); color:var(--blue-deep);
+  font-size:0.68rem; font-weight:700; letter-spacing:1px; text-transform:uppercase;
+  padding:4px 12px; border-radius:50px;
+}
+
+/* ══════════════════════════════════
+   TESTIMONIALS
+══════════════════════════════════ */
+.testi-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:22px; max-width:1000px; margin:0 auto;
+}
+.testi-card {
+  background:var(--white); border:1.5px solid var(--border);
+  border-radius:18px; padding:28px 24px;
+  transition:transform 0.2s, box-shadow 0.2s;
+}
+.testi-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-r); }
+.testi-stars { color:#F5A623; font-size:1rem; margin-bottom:12px; letter-spacing:2px; }
+.testi-quote {
+  color:var(--text2); font-size:0.88rem; line-height:1.75;
+  margin-bottom:18px; font-style:italic;
+}
+.testi-author { display:flex; align-items:center; gap:12px; }
+.testi-avatar {
+  width:44px; height:44px; border-radius:50%;
+  background:linear-gradient(135deg,var(--red-soft),var(--blue));
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.3rem; flex-shrink:0;
+}
+.testi-name { font-family:'Montserrat',sans-serif; font-weight:800; font-size:0.9rem; color:var(--text); }
+.testi-biz { font-size:0.78rem; color:var(--muted); margin-top:1px; }
+
+/* ══════════════════════════════════
+   FAQ
+══════════════════════════════════ */
+.faq-wrap { max-width:740px; margin:0 auto; }
+.faq-item {
+  background:var(--white); border:1.5px solid var(--border);
+  border-radius:14px; margin-bottom:12px; overflow:hidden;
+  transition:border-color 0.2s;
+}
+.faq-item.open { border-color:rgba(232,0,29,0.3); }
+.faq-q {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:18px 22px; cursor:pointer;
+  font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.93rem; color:var(--text);
+  transition:color 0.2s;
+  user-select:none;
+}
+.faq-item.open .faq-q { color:var(--red); }
+.faq-icon { font-size:1.1rem; font-weight:900; color:var(--red); transition:transform 0.3s; flex-shrink:0; }
+.faq-item.open .faq-icon { transform:rotate(45deg); }
+.faq-a {
+  display:none; padding:0 22px 18px;
+  color:var(--text2); font-size:0.88rem; line-height:1.75;
+}
+.faq-item.open .faq-a { display:block; }
+
+/* ══════════════════════════════════
+   CTA BANNER
+══════════════════════════════════ */
+.cta-banner {
+  background:linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+  padding:72px 5%; text-align:center; position:relative; overflow:hidden;
+}
+.cta-banner::before {
+  content:''; position:absolute; inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.cta-banner h2 {
+  font-family:'Montserrat',sans-serif; font-weight:900;
+  font-size:clamp(1.8rem,4vw,3rem);
+  color:#fff; position:relative; z-index:1; margin-bottom:16px;
+}
+.cta-banner p {
+  color:rgba(255,255,255,0.85); font-size:1rem; line-height:1.7;
+  max-width:520px; margin:0 auto 36px; position:relative; z-index:1;
+}
+.btn-white {
+  display:inline-flex; align-items:center; gap:9px;
+  background:#fff; color:var(--red);
+  padding:15px 34px; border-radius:50px;
+  font-family:'Montserrat',sans-serif; font-weight:800; font-size:0.95rem;
+  text-decoration:none; position:relative; z-index:1;
+  box-shadow:0 6px 24px rgba(0,0,0,0.2);
+  transition:transform 0.2s, box-shadow 0.2s;
+}
+.btn-white:hover { transform:translateY(-3px); box-shadow:0 12px 36px rgba(0,0,0,0.3); }
+.btn-wa {
+  display:inline-flex; align-items:center; gap:9px;
+  background:#25D366; color:#fff;
+  padding:15px 34px; border-radius:50px;
+  font-family:'Montserrat',sans-serif; font-weight:800; font-size:0.95rem;
+  text-decoration:none; position:relative; z-index:1;
+  box-shadow:0 6px 24px rgba(37,211,102,0.4);
+  transition:transform 0.2s, box-shadow 0.2s; margin-left:12px;
+}
+.btn-wa:hover { transform:translateY(-3px); }
+
+/* ══════════════════════════════════
+   CONTACT FORM
+══════════════════════════════════ */
+.contact-wrap { max-width:680px; margin:0 auto; }
+.contact-form {
+  background:var(--white); border:1.5px solid var(--border);
+  border-radius:20px; padding:40px; box-shadow:var(--shadow);
+}
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.form-group { margin-bottom:16px; }
+.form-group label { display:block; font-size:0.8rem; font-weight:600; color:var(--text); margin-bottom:6px; }
+.form-group input, .form-group textarea, .form-group select {
+  width:100%; padding:12px 16px;
+  border:1.5px solid var(--border); border-radius:10px;
+  font-family:'Inter',sans-serif; font-size:0.88rem; color:var(--text);
+  background:var(--card2); outline:none; transition:border-color 0.2s;
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color:var(--red); }
+.form-group textarea { resize:vertical; min-height:100px; }
+.form-submit {
+  width:100%; padding:14px; background:var(--red); color:#fff;
+  border:none; border-radius:50px; cursor:pointer;
+  font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.95rem;
+  transition:background 0.2s, transform 0.2s; margin-top:6px;
+}
+.form-submit:hover { background:var(--red-dark); transform:translateY(-2px); }
+
+/* ══════════════════════════════════
+   FLOATING WHATSAPP
+══════════════════════════════════ */
+.wa-float {
+  position:fixed; bottom:28px; right:26px; z-index:999;
+  display:flex; align-items:center; gap:10px;
+  background:#25D366; color:#fff;
+  padding:13px 20px 13px 16px; border-radius:50px;
+  text-decoration:none;
+  font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.85rem;
+  box-shadow:0 6px 22px rgba(37,211,102,0.45);
+  animation:floatBob 2.5s ease-in-out infinite;
+}
+@keyframes floatBob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+
+/* ══════════════════════════════════
+   FOOTER
+══════════════════════════════════ */
+footer {
+  background:var(--text); color:rgba(255,255,255,0.7);
+  padding:50px 5% 28px;
+}
+.footer-top {
+  display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:36px; margin-bottom:36px;
+}
+.footer-brand .logo { color:#fff; font-size:1.2rem; }
+.footer-brand .logo span { color:var(--red); }
+.footer-brand .logo small { color:rgba(255,255,255,0.35); }
+.footer-brand p { font-size:0.83rem; line-height:1.7; margin-top:14px; color:rgba(255,255,255,0.55); }
+.footer-col h4 {
+  font-family:'Montserrat',sans-serif; font-weight:800; font-size:0.85rem; color:#fff;
+  text-transform:uppercase; letter-spacing:1.5px; margin-bottom:14px;
+}
+.footer-col a {
+  display:block; color:rgba(255,255,255,0.55); text-decoration:none;
+  font-size:0.83rem; margin-bottom:8px; transition:color 0.2s;
+}
+.footer-col a:hover { color:var(--red); }
+.footer-bottom {
+  border-top:1px solid rgba(255,255,255,0.1); padding-top:22px;
+  display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:12px;
+}
+.footer-bottom p { font-size:0.78rem; }
+.footer-bottom a { color:var(--red); text-decoration:none; }
+
+/* ══════════════════════════════════
+   ANIMATIONS
+══════════════════════════════════ */
+@keyframes fadeDown { from{opacity:0;transform:translateY(-18px)} to{opacity:1;transform:translateY(0)} }
+@keyframes fadeUp   { from{opacity:0;transform:translateY(28px)}  to{opacity:1;transform:translateY(0)} }
+.reveal { opacity:0; transform:translateY(32px); transition:opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity:1; transform:translateY(0); }
+
+/* ══════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════ */
+@media(max-width:900px) {
+  .overview-wrap { grid-template-columns:1fr; }
+  .overview-visual { height:200px; }
+  .footer-top { grid-template-columns:1fr 1fr; }
+  .process-wrap { padding-left:0; }
+}
+@media(max-width:768px) {
+  .nav-links, .nav-cta { display:none; }
+  .hamburger { display:flex; }
+  .form-row { grid-template-columns:1fr; }
+  .process-line { display:none; }
+  .process-step { padding-left:0; flex-direction:column; gap:12px; }
+  .step-num { position:static; }
+  .btn-wa { margin-left:0; margin-top:12px; }
+}
+@media(max-width:520px) {
+  .stats { gap:22px; }
+  .footer-top { grid-template-columns:1fr; }
+  .wa-float span { display:none; }
+  .wa-float { padding:13px; border-radius:50%; }
+  .cta-banner .btn-white, .cta-banner .btn-wa { display:block; width:fit-content; margin:8px auto; }
+}
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after { animation:none!important; transition:none!important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════ NAVBAR ══════════════════════════════════ -->
+<nav>
+  <a href="https://anveshakula.in" class="logo">Anvesh<span>Digital</span><small>Marketing Agency</small></a>
+  <ul class="nav-links">
+    <li><a href="https://anveshakula.in">Home</a></li>
+    <li><a href="https://anveshakula.in/#services" class="active">Services</a></li>
+    <li><a href="https://anveshakula.in/#works">Works</a></li>
+    <li><a href="https://anveshakula.in/#blogs">Blogs</a></li>
+    <li><a href="https://anveshakula.in/#about">About Us</a></li>
+    <li><a href="https://anveshakula.in/#contact">Contact Us</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <a href="https://wa.me/916300926397?text=Hi%20Anvesh%2C%20I%20want%20a%20website!" class="nav-cta" target="_blank">📲 Free Consult</a>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="https://anveshakula.in">🏠 Home</a>
+  <a href="https://anveshakula.in/#services">⚙️ All Services</a>
+  <a href="https://anveshakula.in/#works">💼 Works</a>
+  <a href="https://anveshakula.in/#blogs">📝 Blogs</a>
+  <a href="https://anveshakula.in/#about">👤 About Us</a>
+  <a href="https://anveshakula.in/#contact">📞 Contact</a>
+  <a href="https://wa.me/916300926397" target="_blank" style="color:var(--red)">💬 WhatsApp Anvesh</a>
+</div>
+
+<!-- ══════════════════════════════════ BREADCRUMB ══════════════════════════════════ -->
+<div class="breadcrumb">
+  <a href="https://anveshakula.in">Home</a>
+  <span class="sep">›</span>
+  <a href="https://anveshakula.in/#services">Services</a>
+  <span class="sep">›</span>
+  <span>Website Development</span>
+</div>
+
+<!-- ══════════════════════════════════ HERO ══════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-circle-1"></div>
+  <div class="hero-circle-2"></div>
+
+  <div class="hero-badge"><span class="badge-dot"></span> Hyderabad's #1 Web Development Agency</div>
+
+  <h1>
+    Professional <span class="red">Website Development</span><br>
+    Services in <span class="blue">Hyderabad</span>
+  </h1>
+
+  <p class="hero-sub">
+    We build <strong>fast, mobile-first, SEO-ready websites</strong> that convert visitors into customers.
+    From business websites to full e-commerce stores — under one roof at anveshakula.in
+  </p>
+
+  <div class="hero-btns">
+    <a href="https://wa.me/916300926397?text=Hi%20Anvesh%2C%20I%20need%20a%20website!%20Please%20share%20your%20packages." class="btn-primary" target="_blank">
+      💬 Get a Free Quote
+    </a>
+    <a href="tel:+916300926397" class="btn-secondary">📞 +91 63009 26397</a>
+    <a href="#packages" class="btn-secondary">💰 View Packages</a>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-num" data-target="100">0</div><div class="stat-label">Websites Delivered</div></div>
+    <div class="stat"><div class="stat-num" data-target="7">0</div><div class="stat-label">Day Avg. Delivery</div></div>
+    <div class="stat"><div class="stat-num" data-target="50">0</div><div class="stat-label">Happy Clients</div></div>
+    <div class="stat"><div class="stat-num" data-target="100">0</div><div class="stat-label">% Mobile-Friendly</div></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ OVERVIEW ══════════════════════════════════ -->
+<section class="section" id="overview">
+  <div class="overview-wrap">
+    <div class="overview-visual reveal">🌐</div>
+    <div class="overview-text">
+      <p class="sec-label reveal">Who We Are</p>
+      <h2 class="sec-title reveal">Web Development <span style="color:var(--red)">Experts</span></h2>
+      <p class="reveal">At <strong>Anvesh Digital</strong>, we don't just build websites — we build <strong>digital assets that generate leads 24/7</strong>. Every project is crafted with performance, SEO, and conversions in mind.</p>
+      <p class="reveal">Whether you're a local shop in Hyderabad or a growing business across Telangana, our websites are built to rank on Google, load in under 2 seconds, and turn visitors into paying customers.</p>
+      <div class="reveal">
+        <p style="font-size:0.8rem;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;margin-top:6px;">Industries We Serve</p>
+        <div class="industries-tags">
+          <span class="ind-tag">🏥 Healthcare</span>
+          <span class="ind-tag">🏠 Real Estate</span>
+          <span class="ind-tag">🛍️ E-commerce</span>
+          <span class="ind-tag">🍽️ Restaurants</span>
+          <span class="ind-tag">📚 Education</span>
+          <span class="ind-tag">⚖️ Legal</span>
+          <span class="ind-tag">✈️ Travel</span>
+          <span class="ind-tag">💼 Corporate</span>
+          <span class="ind-tag">🎨 Portfolio</span>
+          <span class="ind-tag">🤝 NGO</span>
+          <span class="ind-tag">📰 News / Media</span>
+          <span class="ind-tag">💪 Fitness</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ SERVICES ══════════════════════════════════ -->
+<section class="section-alt" id="services">
+  <p class="sec-label reveal">What We Build</p>
+  <h2 class="sec-title reveal">Our Web Development <span style="color:var(--red)">Services</span></h2>
+  <p class="sec-desc reveal">Every type of website, built to perform. Click any service to get a quote on WhatsApp.</p>
+
+  <div class="services-grid">
+    <div class="service-card reveal" onclick="quoteWA('Custom Website Development')">
+      <span class="service-icon">⚙️</span>
+      <div class="service-name">Custom Website Development</div>
+      <p class="service-desc">Fully custom-designed websites built from scratch — no templates, no shortcuts. Unique to your brand.</p>
+      <span class="service-tag">Fully Custom</span>
+    </div>
+    <div class="service-card reveal" onclick="quoteWA('Business Website Development')">
+      <span class="service-icon">🏢</span>
+      <div class="service-name">Business Website Development</div>
+      <p class="service-desc">Professional multi-page websites for businesses — Home, About, Services, Contact & more.</p>
+      <span class="service-tag">Lead Capture</span>
+    </div>
+    <div class="service-card reveal" onclick="quoteWA('E-commerce Website Development')">
+      <span class="service-icon">🛒</span>
+      <div class="service-name">E-commerce Development</div>
+      <p class="service-desc">Complete online stores with product catalog, cart, payment gateway & order management.</p>
+      <span class="service-tag">Sell Online</span>
+    </div>
+    <div class="service-card reveal" onclick="quoteWA('Landing Page Development')">
+      <span class="service-icon">🎯</span>
+      <div class="service-name">Landing Page Development</div>
+      <p class="service-desc">High-converting single-page websites built specifically for ad campaigns and lead generation.</p>
+      <span class="service-tag">High Conversion</span>
+    </div>
+    <div class="service-card reveal" onclick="quoteWA('WordPress CMS Development')">
+      <span class="service-icon">📝</span>
+      <div class="service-name">CMS Development</div>
+      <p class="service-desc">WordPress & Shopify websites you can manage yourself — no coding knowledge needed.</p>
+      <span class="service-tag">Self-Managed</span>
+    </div>
+    <div class="service-card reveal" onclick="quoteWA('Web Application Development')">
+      <span class="service-icon">🖥️</span>
+      <div class="service-name">Web Application Development</div>
+      <p class="service-desc">Custom web apps with dashboards, user login, booking systems, and dynamic features.</p>
+      <span class="service-tag">Advanced</span>
+    </div>
+    <div class="service-card reveal" onclick="quoteWA('Website Redesign')">
+      <span class="service-icon">🔄</span>
+      <div class="service-name">Website Redesign</div>
+      <p class="service-desc">Transform your outdated website into a modern, fast, mobile-friendly experience that converts.</p>
+      <span class="service-tag">Revamp</span>
+    </div>
+    <div class="service-card reveal" onclick="quoteWA('API Integration')">
+      <span class="service-icon">🔌</span>
+      <div class="service-name">API Integration</div>
+      <p class="service-desc">Connect your website with payment gateways, CRMs, WhatsApp APIs, maps & third-party tools.</p>
+      <span class="service-tag">Connected</span>
+    </div>
+    <div class="service-card reveal" onclick="quoteWA('Database Development')">
+      <span class="service-icon">🗄️</span>
+      <div class="service-name">Database Development</div>
+      <p class="service-desc">Scalable backend databases for storing customer data, inventory, bookings & product catalogs.</p>
+      <span class="service-tag">Scalable</span>
+    </div>
+    <div class="service-card reveal" onclick="quoteWA('Website Maintenance & Support')">
+      <span class="service-icon">🔧</span>
+      <div class="service-name">Maintenance & Support</div>
+      <p class="service-desc">Keep your site secure, updated, and running at full speed. Monthly care plans available.</p>
+      <span class="service-tag">Always Online</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ FEATURES INCLUDED ══════════════════════════════════ -->
+<section class="section" id="features">
+  <p class="sec-label reveal">What's Included</p>
+  <h2 class="sec-title reveal">Every Website <span style="color:var(--red)">Comes With</span></h2>
+  <p class="sec-desc reveal">No hidden extras. These features are standard in every project we deliver.</p>
+
+  <div class="features-grid">
+    <div class="feature-item reveal">
+      <div class="feature-check">✓</div>
+      <div class="feature-text"><strong>Responsive Mobile-First Design</strong><span>Looks perfect on phones, tablets & desktops</span></div>
+    </div>
+    <div class="feature-item reveal">
+      <div class="feature-check">✓</div>
+      <div class="feature-text"><strong>Fast Loading Speed</strong><span>Under 2 seconds — better rankings, lower bounce</span></div>
+    </div>
+    <div class="feature-item reveal">
+      <div class="feature-check">✓</div>
+      <div class="feature-text"><strong>SEO-Friendly Structure</strong><span>Proper tags, schema, sitemaps & canonical URLs</span></div>
+    </div>
+    <div class="feature-item reveal">
+      <div class="feature-check">✓</div>
+      <div class="feature-text"><strong>Secure Coding</strong><span>Clean, vulnerability-free code following best practices</span></div>
+    </div>
+    <div class="feature-item reveal">
+      <div class="feature-check">✓</div>
+      <div class="feature-text"><strong>SSL Certificate Setup</strong><span>HTTPS enabled — trust signals for Google & users</span></div>
+    </div>
+    <div class="feature-item reveal">
+      <div class="feature-check">✓</div>
+      <div class="feature-text"><strong>Contact Forms</strong><span>Lead capture forms with WhatsApp & email alerts</span></div>
+    </div>
+    <div class="feature-item reveal">
+      <div class="feature-check">✓</div>
+      <div class="feature-text"><strong>Google Maps Integration</strong><span>Embedded maps for your business location</span></div>
+    </div>
+    <div class="feature-item reveal">
+      <div class="feature-check">✓</div>
+      <div class="feature-text"><strong>Social Media Integration</strong><span>Links to Instagram, Facebook, YouTube & more</span></div>
+    </div>
+    <div class="feature-item reveal">
+      <div class="feature-check">✓</div>
+      <div class="feature-text"><strong>Google Analytics Setup</strong><span>Track visitors, traffic sources & conversions</span></div>
+    </div>
+    <div class="feature-item reveal">
+      <div class="feature-check">✓</div>
+      <div class="feature-text"><strong>Cross-Browser Compatibility</strong><span>Works on Chrome, Safari, Firefox & Edge</span></div>
+    </div>
+    <div class="feature-item reveal">
+      <div class="feature-check">✓</div>
+      <div class="feature-text"><strong>Performance Optimization</strong><span>Image compression, lazy loading & caching</span></div>
+    </div>
+    <div class="feature-item reveal">
+      <div class="feature-check">✓</div>
+      <div class="feature-text"><strong>Basic On-Page SEO</strong><span>Title tags, meta descriptions & keyword setup</span></div>
+    </div>
+    <div class="feature-item reveal">
+      <div class="feature-check">✓</div>
+      <div class="feature-text"><strong>WhatsApp Chat Button</strong><span>One-tap WhatsApp contact for mobile visitors</span></div>
+    </div>
+    <div class="feature-item reveal">
+      <div class="feature-check">✓</div>
+      <div class="feature-text"><strong>Admin Dashboard</strong><span>Manage content, products & leads — when applicable</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ TECH STACK ══════════════════════════════════ -->
+<section class="section-alt" id="tech">
+  <p class="sec-label reveal">What We Use</p>
+  <h2 class="sec-title reveal">Our <span style="color:var(--red)">Technology Stack</span></h2>
+  <p class="sec-desc reveal">Industry-standard tools for fast, scalable, and maintainable websites.</p>
+
+  <div class="tech-grid">
+    <div class="tech-pill reveal"><span class="t-icon">🟠</span> HTML5</div>
+    <div class="tech-pill reveal"><span class="t-icon">🔵</span> CSS3</div>
+    <div class="tech-pill reveal"><span class="t-icon">🟡</span> JavaScript</div>
+    <div class="tech-pill reveal"><span class="t-icon">⚛️</span> React</div>
+    <div class="tech-pill reveal"><span class="t-icon">▲</span> Next.js</div>
+    <div class="tech-pill reveal"><span class="t-icon">🐘</span> PHP</div>
+    <div class="tech-pill reveal"><span class="t-icon">🟢</span> Node.js</div>
+    <div class="tech-pill reveal"><span class="t-icon">📝</span> WordPress</div>
+    <div class="tech-pill reveal"><span class="t-icon">🛒</span> Shopify</div>
+    <div class="tech-pill reveal"><span class="t-icon">🗄️</span> MySQL</div>
+    <div class="tech-pill reveal"><span class="t-icon">🍃</span> MongoDB</div>
+    <div class="tech-pill reveal"><span class="t-icon">🔥</span> Firebase</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ PROCESS ══════════════════════════════════ -->
+<section class="section" id="process">
+  <p class="sec-label reveal">How We Work</p>
+  <h2 class="sec-title reveal">Our Development <span style="color:var(--red)">Process</span></h2>
+  <p class="sec-desc reveal">A clear, transparent 8-step workflow — so you always know what's happening with your project.</p>
+
+  <div class="process-wrap">
+    <div class="process-line"></div>
+
+    <div class="process-step reveal">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <div class="step-title">Requirement Analysis</div>
+        <p class="step-desc">We start with a discovery call (WhatsApp or phone) to understand your business, goals, target audience, and the features your website needs.</p>
+      </div>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <div class="step-title">Planning & Strategy</div>
+        <p class="step-desc">We map out the site structure, page layout, content plan, and technology stack. A clear timeline and deliverable list is shared with you upfront.</p>
+      </div>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <div class="step-title">UI/UX Design</div>
+        <p class="step-desc">We design mobile-first wireframes and visual mockups aligned with your brand colors, fonts, and style. Your feedback shapes the final look.</p>
+      </div>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <div class="step-title">Development</div>
+        <p class="step-desc">Our developers build the website with clean code — responsive, fast-loading, SEO-structured, and fully functional across all devices and browsers.</p>
+      </div>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">5</div>
+      <div class="step-body">
+        <div class="step-title">Testing & QA</div>
+        <p class="step-desc">Thorough testing across multiple devices, screen sizes, and browsers. We check speed, forms, links, and user experience before you see it.</p>
+      </div>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">6</div>
+      <div class="step-body">
+        <div class="step-title">Client Review</div>
+        <p class="step-desc">We share a live preview link for your review. You can request edits — we revise until you're completely satisfied with every detail.</p>
+      </div>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">7</div>
+      <div class="step-body">
+        <div class="step-title">Launch 🚀</div>
+        <p class="step-desc">Once approved, we deploy to your domain with SSL, connect analytics, and do a final performance check. Your website goes live!</p>
+      </div>
+    </div>
+    <div class="process-step reveal" style="margin-bottom:0">
+      <div class="step-num">8</div>
+      <div class="step-body">
+        <div class="step-title">Ongoing Maintenance & Support</div>
+        <p class="step-desc">Post-launch, we offer monthly maintenance plans — updates, security patches, content changes, and speed optimization. You're never alone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ WHY CHOOSE US ══════════════════════════════════ -->
+<section class="section-alt" id="why">
+  <p class="sec-label reveal">Why Anvesh Digital</p>
+  <h2 class="sec-title reveal">Why Choose <span style="color:var(--red)">Us?</span></h2>
+  <p class="sec-desc reveal">We do things differently — and our results prove it.</p>
+
+  <div class="why-grid">
+    <div class="why-card reveal"><div class="why-icon">👨‍💻</div><div class="why-title">Experienced Developers</div><p class="why-desc">Real expertise with 100+ websites delivered across diverse industries in Hyderabad.</p></div>
+    <div class="why-card reveal"><div class="why-icon">🎨</div><div class="why-title">Custom Solutions</div><p class="why-desc">No templates — every website is uniquely designed for your brand and business goals.</p></div>
+    <div class="why-card reveal"><div class="why-icon">💰</div><div class="why-title">Affordable Pricing</div><p class="why-desc">Premium quality websites at prices that work for startups and small businesses.</p></div>
+    <div class="why-card reveal"><div class="why-icon">⏰</div><div class="why-title">On-Time Delivery</div><p class="why-desc">We commit to timelines and stick to them. Most projects delivered within 7–14 days.</p></div>
+    <div class="why-card reveal"><div class="why-icon">📈</div><div class="why-title">SEO-Ready Websites</div><p class="why-desc">Every site is built to rank. Google loves our clean code and speed-optimized pages.</p></div>
+    <div class="why-card reveal"><div class="why-icon">🤝</div><div class="why-title">Ongoing Support</div><p class="why-desc">WhatsApp Anvesh directly anytime. Always responsive, always accountable.</p></div>
+    <div class="why-card reveal"><div class="why-icon">🔍</div><div class="why-title">Full Transparency</div><p class="why-desc">You'll know exactly what we're building, when we'll deliver, and what it costs.</p></div>
+    <div class="why-card reveal"><div class="why-icon">🚀</div><div class="why-title">End-to-End Service</div><p class="why-desc">Domain, hosting, design, development, SEO, ads — everything under one roof.</p></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ WEBSITE TYPES ══════════════════════════════════ -->
+<section class="section" id="types">
+  <p class="sec-label reveal">What We Build</p>
+  <h2 class="sec-title reveal">Types of <span style="color:var(--red)">Websites</span></h2>
+  <p class="sec-desc reveal">Whatever your niche, we've built it before — and we'll build it better.</p>
+
+  <div class="types-grid">
+    <div class="type-card reveal"><span class="type-icon">🏢</span><div class="type-name">Business Websites</div></div>
+    <div class="type-card reveal"><span class="type-icon">🏛️</span><div class="type-name">Corporate Websites</div></div>
+    <div class="type-card reveal"><span class="type-icon">🛒</span><div class="type-name">E-commerce Stores</div></div>
+    <div class="type-card reveal"><span class="type-icon">🎨</span><div class="type-name">Portfolio Websites</div></div>
+    <div class="type-card reveal"><span class="type-icon">📚</span><div class="type-name">Educational Websites</div></div>
+    <div class="type-card reveal"><span class="type-icon">🏥</span><div class="type-name">Healthcare Websites</div></div>
+    <div class="type-card reveal"><span class="type-icon">🏠</span><div class="type-name">Real Estate Websites</div></div>
+    <div class="type-card reveal"><span class="type-icon">🍽️</span><div class="type-name">Restaurant Websites</div></div>
+    <div class="type-card reveal"><span class="type-icon">✈️</span><div class="type-name">Travel Websites</div></div>
+    <div class="type-card reveal"><span class="type-icon">🤝</span><div class="type-name">NGO Websites</div></div>
+    <div class="type-card reveal"><span class="type-icon">📰</span><div class="type-name">News Portals</div></div>
+    <div class="type-card reveal"><span class="type-icon">✍️</span><div class="type-name">Personal Blogs</div></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ PRICING ══════════════════════════════════ -->
+<section class="section-alt" id="packages">
+  <p class="sec-label reveal">Investment</p>
+  <h2 class="sec-title reveal">Simple, Transparent <span style="color:var(--red)">Pricing</span></h2>
+  <p class="sec-desc reveal">Choose the package that fits your business. Custom pricing available for complex projects — just ask.</p>
+
+  <div class="pricing-grid">
+    <div class="price-card reveal">
+      <div class="price-name">🌱 Starter</div>
+      <p style="font-size:0.82rem;color:var(--muted);margin:6px 0 0">Perfect for individuals & startups</p>
+      <div class="price-val">₹7,999 <small>onwards</small></div>
+      <p class="price-note">One-time payment · 7-day delivery</p>
+      <ul class="price-features">
+        <li>Up to 5 Pages</li>
+        <li>Mobile-Responsive Design</li>
+        <li>Contact Form + WhatsApp Button</li>
+        <li>Basic SEO Setup</li>
+        <li>Google Maps Integration</li>
+        <li>SSL Certificate Setup</li>
+        <li>Google Analytics Setup</li>
+        <li class="cross">E-commerce / Shop</li>
+        <li class="cross">Custom Web Application</li>
+      </ul>
+      <a href="https://wa.me/916300926397?text=Hi%20Anvesh%2C%20I%27m%20interested%20in%20the%20Starter%20Website%20Package." class="price-btn outline" target="_blank">Get Starter Package</a>
+    </div>
+
+    <div class="price-card popular reveal">
+      <div class="popular-badge">⭐ Most Popular</div>
+      <div class="price-name">🚀 Business</div>
+      <p style="font-size:0.82rem;color:var(--muted);margin:6px 0 0">For growing businesses in Hyderabad</p>
+      <div class="price-val">₹14,999 <small>onwards</small></div>
+      <p class="price-note">One-time payment · 10-day delivery</p>
+      <ul class="price-features">
+        <li>Up to 10 Pages</li>
+        <li>Custom Design (Brand-aligned)</li>
+        <li>Lead Capture Forms & CTA</li>
+        <li>Full On-Page SEO</li>
+        <li>Google Maps + Social Links</li>
+        <li>SSL + Speed Optimization</li>
+        <li>Analytics + Search Console</li>
+        <li>Blog / News Section</li>
+        <li class="cross">E-commerce / Shop</li>
+      </ul>
+      <a href="https://wa.me/916300926397?text=Hi%20Anvesh%2C%20I%27m%20interested%20in%20the%20Business%20Website%20Package." class="price-btn" target="_blank">Get Business Package</a>
+    </div>
+
+    <div class="price-card reveal">
+      <div class="price-name">💎 Premium</div>
+      <p style="font-size:0.82rem;color:var(--muted);margin:6px 0 0">E-commerce, custom apps & advanced</p>
+      <div class="price-val">₹29,999 <small>onwards</small></div>
+      <p class="price-note">One-time payment · 14-day delivery</p>
+      <ul class="price-features">
+        <li>Unlimited Pages</li>
+        <li>E-commerce / Product Catalog</li>
+        <li>Payment Gateway Integration</li>
+        <li>Admin Dashboard / CMS</li>
+        <li>API & CRM Integration</li>
+        <li>Advanced SEO + Schema Markup</li>
+        <li>Performance Audit Report</li>
+        <li>1 Month Free Maintenance</li>
+        <li>Priority WhatsApp Support</li>
+      </ul>
+      <a href="https://wa.me/916300926397?text=Hi%20Anvesh%2C%20I%27m%20interested%20in%20the%20Premium%20Website%20Package." class="price-btn outline" target="_blank">Get Premium Package</a>
+    </div>
+  </div>
+
+  <p class="reveal" style="text-align:center;margin-top:28px;color:var(--muted);font-size:0.86rem;">
+    💡 Need something custom? <a href="https://wa.me/916300926397?text=Hi%20Anvesh%2C%20I%20need%20a%20custom%20website%20quote." target="_blank" style="color:var(--red);font-weight:700;">WhatsApp Anvesh for a custom quote →</a>
+  </p>
+</section>
+
+<!-- ══════════════════════════════════ PORTFOLIO ══════════════════════════════════ -->
+<section class="section" id="portfolio">
+  <p class="sec-label reveal">Our Work</p>
+  <h2 class="sec-title reveal">Recent <span style="color:var(--red)">Projects</span></h2>
+  <p class="sec-desc reveal">Real websites we've built that drove real results for our clients.</p>
+
+  <div class="works-grid">
+    <div class="work-card reveal">
+      <div class="work-thumb">🏥<span class="work-result">3× Leads</span></div>
+      <div class="work-body">
+        <div class="work-title">Healthcare Clinic Website</div>
+        <p class="work-desc">Built a multi-page clinic website with online appointment booking — 3× increase in patient inquiries within 30 days of launch.</p>
+        <span class="work-tag">Web Dev + SEO</span>
+      </div>
+    </div>
+    <div class="work-card reveal">
+      <div class="work-thumb">🏠<span class="work-result">200+ Leads</span></div>
+      <div class="work-body">
+        <div class="work-title">Real Estate Landing Page</div>
+        <p class="work-desc">High-converting landing page for a Hyderabad builder — drove 200+ qualified buyer leads via Google Ads in the first month.</p>
+        <span class="work-tag">Landing Page + Ads</span>
+      </div>
+    </div>
+    <div class="work-card reveal">
+      <div class="work-thumb">🛍️<span class="work-result">5× Revenue</span></div>
+      <div class="work-body">
+        <div class="work-title">Fashion E-commerce Store</div>
+        <p class="work-desc">Complete Shopify-based e-commerce site with 150+ products, payment gateway, and order management — 5× revenue growth.</p>
+        <span class="work-tag">E-commerce + Shopify</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ TESTIMONIALS ══════════════════════════════════ -->
+<section class="section-alt" id="testimonials">
+  <p class="sec-label reveal">Client Love</p>
+  <h2 class="sec-title reveal">What Our <span style="color:var(--red)">Clients Say</span></h2>
+  <p class="sec-desc reveal">Real reviews from real business owners across Hyderabad and Telangana.</p>
+
+  <div class="testi-grid">
+    <div class="testi-card reveal">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">"Anvesh built our clinic website in just 8 days. It's fast, looks professional, and we started getting online appointment requests within the first week. Highly recommend!"</p>
+      <div class="testi-author">
+        <div class="testi-avatar">👨‍⚕️</div>
+        <div><div class="testi-name">Dr. Ravi Shankar</div><div class="testi-biz">MedCare Clinic, Hyderabad</div></div>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">"I needed a landing page for my Google Ads campaign — Anvesh delivered in 5 days. The page converts really well. We get 15–20 leads per day now. Worth every rupee!"</p>
+      <div class="testi-author">
+        <div class="testi-avatar">🏠</div>
+        <div><div class="testi-name">Suresh Reddy</div><div class="testi-biz">SR Properties, Hyderabad</div></div>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">"Our old website was slow and ugly. Anvesh redesigned it completely — it's beautiful, loads in under 2 seconds, and our Google ranking improved within a month. Excellent work!"</p>
+      <div class="testi-author">
+        <div class="testi-avatar">🛍️</div>
+        <div><div class="testi-name">Priya Lakshmi</div><div class="testi-biz">StyleHub Boutique, Secunderabad</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ FAQ ══════════════════════════════════ -->
+<section class="section" id="faq">
+  <p class="sec-label reveal">Got Questions?</p>
+  <h2 class="sec-title reveal">Frequently Asked <span style="color:var(--red)">Questions</span></h2>
+  <p class="sec-desc reveal">Everything you want to know before starting your website project.</p>
+
+  <div class="faq-wrap">
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">How long does website development take? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Most business websites are delivered within 7–14 days. Landing pages can be ready in 3–5 days. E-commerce and custom web applications may take 14–30 days depending on complexity. We always share a timeline upfront before starting.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">How much does a website cost? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Our Starter package begins at ₹7,999, Business package at ₹14,999, and Premium (with e-commerce or custom features) at ₹29,999 onwards. The exact cost depends on your requirements — WhatsApp Anvesh for a free, no-obligation quote.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">Do you provide hosting and domain? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Yes! We can assist with domain registration and hosting setup. We recommend reliable providers and help you get everything configured. Hosting costs are typically ₹2,000–₹5,000/year depending on the plan you choose.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">Will my website be mobile-friendly? <span class="faq-icon">+</span></div>
+      <div class="faq-a">100% yes. All our websites are built mobile-first — meaning they're designed for smartphones first, then adapted for tablets and desktops. Over 70% of web traffic in India comes from mobile, so this is non-negotiable for us.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">Can I update the website myself? <span class="faq-icon">+</span></div>
+      <div class="faq-a">If we build your website on WordPress or Shopify, yes — you can update content, add products, and manage your blog without any coding skills. We also provide a short training walkthrough so you feel confident doing it yourself.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">Do you provide website maintenance? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Absolutely. We offer monthly maintenance plans starting at ₹1,999/month — covering security updates, speed optimization, content changes, backups, and uptime monitoring. Premium packages include 1 month free maintenance.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">Is SEO included in website development? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Basic on-page SEO is included in every package — title tags, meta descriptions, heading structure, sitemap, and Google Search Console setup. For full SEO campaigns (keyword ranking, link building, local SEO), we offer a separate SEO service package.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">Do you redesign existing websites? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Yes! Website redesign is one of our most popular services. We take your outdated or slow website and transform it into a modern, fast, mobile-friendly site while preserving your brand identity and existing SEO rankings where possible.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">What information do you need to get started? <span class="faq-icon">+</span></div>
+      <div class="faq-a">To start, we need your business name, logo (if available), brand colors, services/products list, and any reference websites you like. No worries if you don't have everything ready — we'll guide you through it all on a free discovery call.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ CTA BANNER ══════════════════════════════════ -->
+<section class="cta-banner" id="cta">
+  <h2>Ready to Build Your Dream Website? 🚀</h2>
+  <p>Get a free consultation with Anvesh — no commitments, no pressure. Just honest advice on what your business needs online.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;position:relative;z-index:1">
+    <a href="https://wa.me/916300926397?text=Hi%20Anvesh%2C%20I%20want%20to%20build%20a%20website.%20Can%20you%20share%20more%20details?" class="btn-white" target="_blank">
+      💬 Get Free Quote on WhatsApp
+    </a>
+    <a href="tel:+916300926397" class="btn-wa">
+      📞 Call Anvesh Now
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ CONTACT FORM ══════════════════════════════════ -->
+<section class="section-alt" id="contact">
+  <p class="sec-label reveal">Get In Touch</p>
+  <h2 class="sec-title reveal">Tell Us About Your <span style="color:var(--red)">Project</span></h2>
+  <p class="sec-desc reveal">Fill this out and Anvesh will WhatsApp you within the hour with a custom quote.</p>
+
+  <div class="contact-wrap">
+    <div class="contact-form reveal">
+      <h3 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.15rem;color:var(--text);margin-bottom:22px;">📋 Request a Free Website Quote</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">Your Name *</label>
+          <input type="text" id="fname" placeholder="Eg: Ravi Kumar" />
+        </div>
+        <div class="form-group">
+          <label for="fphone">Phone Number *</label>
+          <input type="tel" id="fphone" placeholder="+91 XXXXX XXXXX" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="femail">Email Address</label>
+        <input type="email" id="femail" placeholder="your@email.com" />
+      </div>
+      <div class="form-group">
+        <label for="ftype">Website Type *</label>
+        <select id="ftype">
+          <option value="">Select website type…</option>
+          <option>Business Website</option>
+          <option>E-commerce Store</option>
+          <option>Landing Page</option>
+          <option>Portfolio Website</option>
+          <option>WordPress Website</option>
+          <option>Web Application</option>
+          <option>Website Redesign</option>
+          <option>Other / Custom</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="fbudget">Your Budget Range</label>
+        <select id="fbudget">
+          <option value="">Select budget range…</option>
+          <option>₹5,000 – ₹10,000</option>
+          <option>₹10,000 – ₹20,000</option>
+          <option>₹20,000 – ₹50,000</option>
+          <option>₹50,000+</option>
+          <option>Not sure — need advice</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="fmsg">Tell us about your business & requirements</label>
+        <textarea id="fmsg" placeholder="What does your business do? What pages do you need? Any reference websites?…"></textarea>
+      </div>
+      <button class="form-submit" onclick="sendToWA()">🚀 Send to Anvesh via WhatsApp</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ FOOTER ══════════════════════════════════ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="logo">Anvesh<span>Digital</span><small>Marketing Agency</small></div>
+      <p>Hyderabad's dedicated lead generation & web development agency. We build websites that rank, convert, and grow your business.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Web Services</h4>
+      <a href="#services" onclick="quoteWA('Business Website')">Business Websites</a>
+      <a href="#services" onclick="quoteWA('E-commerce Development')">E-commerce Stores</a>
+      <a href="#services" onclick="quoteWA('Landing Page')">Landing Pages</a>
+      <a href="#services" onclick="quoteWA('WordPress CMS')">WordPress / CMS</a>
+      <a href="#services" onclick="quoteWA('Website Redesign')">Website Redesign</a>
+      <a href="#services" onclick="quoteWA('Website Maintenance')">Maintenance Plans</a>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="https://anveshakula.in">Home</a>
+      <a href="#overview">Overview</a>
+      <a href="#packages">Pricing</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="tel:+916300926397">📞 +91 63009 26397</a>
+      <a href="https://wa.me/916300926397" target="_blank">💬 WhatsApp Anvesh</a>
+      <a href="mailto:anveshakula7@gmail.com">✉️ anveshakula7@gmail.com</a>
+      <a href="https://anveshakula.in" target="_blank">🌐 anveshakula.in</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <a href="https://anveshakula.in">Anvesh Digital Marketing Agency</a> · All rights reserved.</p>
+    <p>Made with ❤️ in Hyderabad, Telangana, India</p>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════ FLOATING WHATSAPP ══════════════════════════════════ -->
+<a href="https://wa.me/916300926397?text=Hi%20Anvesh%2C%20I%20want%20to%20build%20a%20website!" class="wa-float" target="_blank">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.856L0 24l6.338-1.508A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.651-.498-5.187-1.369l-.371-.222-3.847.916.978-3.736-.241-.386A9.959 9.959 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  <span>Get Free Quote</span>
+</a>
+
+<!-- ══════════════════════════════════ JAVASCRIPT ══════════════════════════════════ -->
+<script>
+// Hamburger
+const ham = document.getElementById('hamburger');
+const mMenu = document.getElementById('mobileMenu');
+ham.addEventListener('click', () => {
+  ham.classList.toggle('open');
+  mMenu.classList.toggle('open');
+  document.body.style.overflow = mMenu.classList.contains('open') ? 'hidden' : '';
+});
+document.querySelectorAll('.mobile-menu a').forEach(a => a.addEventListener('click', () => {
+  ham.classList.remove('open');
+  mMenu.classList.remove('open');
+  document.body.style.overflow = '';
+}));
+
+// Scroll Reveal
+const revEls = document.querySelectorAll('.reveal');
+const revObs = new IntersectionObserver(entries => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 50);
+      revObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+revEls.forEach(el => revObs.observe(el));
+
+// Counter
+function animCount(el, target, suffix) {
+  let n = 0; const step = Math.ceil(target / 60);
+  const t = setInterval(() => {
+    n += step;
+    if (n >= target) { el.textContent = target + suffix; clearInterval(t); }
+    else el.textContent = n + suffix;
+  }, 25);
+}
+const statObs = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting) {
+    document.querySelectorAll('[data-target]').forEach(el => {
+      const t = parseInt(el.dataset.target);
+      animCount(el, t, t === 100 ? '%' : '+');
+    });
+    statObs.disconnect();
+  }
+}, { threshold: 0.5 });
+const statsEl = document.querySelector('.stats');
+if (statsEl) statObs.observe(statsEl);
+
+// FAQ
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const allItems = document.querySelectorAll('.faq-item');
+  allItems.forEach(i => { if (i !== item) i.classList.remove('open'); });
+  item.classList.toggle('open');
+}
+
+// WhatsApp quote helper
+function quoteWA(service) {
+  const msg = `Hi Anvesh! I'm interested in ${service}. Can you please share more details and pricing?`;
+  window.open(`https://wa.me/916300926397?text=${encodeURIComponent(msg)}`, '_blank');
+}
+
+// Contact form → WhatsApp
+function sendToWA() {
+  const name   = document.getElementById('fname').value.trim();
+  const phone  = document.getElementById('fphone').value.trim();
+  const email  = document.getElementById('femail').value.trim();
+  const type   = document.getElementById('ftype').value;
+  const budget = document.getElementById('fbudget').value;
+  const msg    = document.getElementById('fmsg').value.trim();
+  if (!name || !phone) { alert('Please enter your name and phone number.'); return; }
+  const text = `Hi Anvesh! 👋\n\nI need a Website Quote:\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email || 'N/A'}\nWebsite Type: ${type || 'Not specified'}\nBudget: ${budget || 'Not specified'}\nRequirements: ${msg || 'No details provided yet'}`;
+  window.open(`https://wa.me/916300926397?text=${encodeURIComponent(text)}`, '_blank');
+}
+</script>
+</body>
+</html>
